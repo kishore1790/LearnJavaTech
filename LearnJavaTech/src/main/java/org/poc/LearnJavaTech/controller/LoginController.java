@@ -2,6 +2,7 @@ package org.poc.LearnJavaTech.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -17,4 +18,13 @@ public class LoginController {
 		
 	}
 	
+	@RequestMapping(value="/test")
+	public ModelAndView loginValidate(@RequestParam(value="greeting" ,required=false)String  greeting) {
+		ModelAndView mav=new ModelAndView("login");
+		if(greeting==null)
+			mav.addObject("greeting","Default Login");
+		
+		mav.addObject("greeting",greeting);
+		return mav;
+	}
 }
