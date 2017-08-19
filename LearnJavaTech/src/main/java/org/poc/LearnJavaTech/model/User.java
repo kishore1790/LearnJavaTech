@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Employee {
+public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -43,6 +43,8 @@ public class Employee {
 	
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", password=" + password +"]";
+		return "User [id=" + id + ", name=" + name + ", password=" + password +"]";
 	}
 }
+
+

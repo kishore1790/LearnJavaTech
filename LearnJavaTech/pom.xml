@@ -10,6 +10,8 @@
 	<properties>
 		<javaee.version>7.0</javaee.version>
 		<springmvc.version>4.3.6.RELEASE</springmvc.version>
+		<hibernate.version>5.2.7.Final</hibernate.version>
+		<mysql.version>5.1.6</mysql.version>
 	</properties>
 	<dependencies>
 
@@ -18,6 +20,13 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${springmvc.version}</version>
+		</dependency>
+		
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -33,8 +42,42 @@
 			<version>${javaee.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${springmvc.version}</version>
+		</dependency>
 
+		<!-- Hibernate Dependency -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
 
+		<!-- MYSQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		
+		<!-- Database Connection Pooling -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+		
+		<!-- SLF4J Logging -->
+		
+
+		<dependency>
+		    <groupId>commons-digester</groupId>
+		    <artifactId>commons-digester</artifactId>
+		    <version>2.1</version>
+		</dependency>
 		<!-- -JUNIT -->
 		<dependency>
 			<groupId>junit</groupId>
