@@ -8,10 +8,11 @@
 <jsp:include page="/WEB-INF/views/shared/navigation.jsp" />
 </head>
 <body>
-  <div class="alert alert-success">
-    <strong>Login SuccessFul!!!</strong>
-  </div>
-
-
+<strong>Welcome ${user.name} !!!</strong>
+	<div class="container-fluid">
+<!-- 	  <div class="alert alert-success"> -->
+	    <jsp:include page="/WEB-INF/views/view.jsp" />
+	  </div>
+	</div>
 </body>
 </html>

@@ -14,8 +14,12 @@ public class Employee {
 	private Integer id;
 	@Column(name = "name")
 	private String name;
-	@Column(name = "password")
-	private String password;
+	@Column(name = "designation")
+	private String designation;
+	@Column(name = "age")
+	private Integer age;
+	@Column(name = "salary")
+	private Integer salary;
 
 	public String getName() {
 		return name;
@@ -25,14 +29,6 @@ public class Employee {
 		this.name = name;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	public Integer getId() {
 		return id;
 	}
@@ -40,9 +36,34 @@ public class Employee {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", password=" + password +"]";
+		return "Product [id=" + id + ", name=" + name + ", designation=" + designation + ", age=" + age + ", salary="
+				+ salary + "]";
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	public Integer getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Integer salary) {
+		this.salary = salary;
 	}
 }
